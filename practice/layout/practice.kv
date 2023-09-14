@@ -1,0 +1,118 @@
+PageLayoutEx: 
+
+<PageLayoutEx@PageLayout>:
+    MainWidget:
+    BoxLayoutEx:
+    AnchorLayoutEx:
+    GridLayoutEx:
+
+<ScrollViewEx@ScrollView>:
+    StackLayoutEx: 
+        size_hint:1, None
+        height: self.minimum_height
+
+
+<StackLayoutEx>:
+    #left-right, top-bottom
+    #orientation: "lr-tb"
+    #top,left,bot,right only from edge of screen 
+    padding: ("20dp","20dp","20dp","20dp")
+    #spaces from other elements
+    spacing: "20dp","20dp"
+
+
+
+
+<GridLayoutEx@GridLayout>:
+    #Rows
+    #Columns
+    cols: 3
+    rows: 2
+    Button:
+        text: "A"
+        size_hint: None, None
+        width: "50dp"
+        height: "50dp"
+        # not working pos_hint: {"top": .5}
+        color: 1, 0, 0, 1
+    Button: 
+        text: "B"
+    Button:
+        text: "C"
+    Button:
+        text: "A"
+        size_hint: None, None
+        width: "50dp"
+        height: "50dp"
+        # not working pos_hint: {"top": .5}
+    Button: 
+        text: "B"
+    Button:
+        text: "C"
+
+
+
+<AnchorLayoutEx>:
+    #right,left, center
+    anchor_x: "left"
+    
+
+    #bottom,top,center
+    anchor_y:
+
+    Button:
+        text:"A"
+        size_hint: .1, .1
+
+
+
+<BoxLayoutEx>:
+    orientation: "vertical"
+    Button:
+        text: "Start"
+    BoxLayout:
+        
+        Button:
+            
+            text: "Start"
+            #size_hint: 1, .5
+            size_hint: 1, None
+            #size: "40dp", "40dp"
+            height: "50dp"
+
+            #X,center_x,right
+            #Y, center_y, top
+            #pos_hint: {"right":.5}
+        Button:
+            text: "Start"
+            #size_hint: 1, .5
+            size_hint: 1, None
+            #size: "40dp", "40dp"
+            height: "50dp"
+
+            #X,center_x,right
+            #Y, center_y, top
+            #pos_hint: {"right":.5}
+        Button:
+            text: "Start"
+            #size_hint: 1, .5
+            size_hint: 1, None
+            #size: "40dp", "40dp"
+            height: "50dp"
+
+            #X,center_x,right
+            #Y, center_y, top
+            #pos_hint: {"right":.5}
+
+
+<MainWidget>:
+    Button:
+        text: "Start"
+        size: "200dp", "100dp"
+        pos: "100dp", "100dp"
+
+    Button:
+        text: "End"
+        size: "200dp", "100dp"
+        pos: "200dp", "200dp"
+        color: .5, .5, 1, 1, 
