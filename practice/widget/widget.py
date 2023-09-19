@@ -8,15 +8,16 @@ from kivy.properties import StringProperty
 class ButtonClickEx(GridLayout):
     
     my_text=StringProperty("0")
-    count = 1
+    count = 0
     def on_button_click(self):
         print("clicked")
-        self.my_text = str(self.count)
         self.count += 1
+        self.my_text = str(self.count)
+        
     def on_reset_click(self):
         print("reset")
         self.my_text = str(0)
-        self.count = 1
+        self.count = 0
 
 
 class WidgetApp(App):

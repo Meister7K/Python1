@@ -1,0 +1,27 @@
+LabelEx:
+
+<LabelEx>:
+    cols: 4
+    ToggleButton:
+        text: "OFF"
+        on_state: root.on_toggle_state(self)
+        font_name: "practice/fonts/AC.ttf"
+        font_size: "80dp"
+        color: 1,0,1,1
+    Button: 
+        text: "Add"
+        on_press: root.on_button_click()
+        font_name: "practice/fonts/AC.ttf"
+        font_size: "80dp"
+        color: 1,0,1,1
+    Button: 
+        text: "Reset"
+        on_press: root.on_reset_click()
+        font_name: "practice/fonts/AC.ttf"
+        font_size: "80dp"
+        color: 1,0,1,1
+    Label: 
+        text: root.my_text
+        font_name: "practice/fonts/AC.ttf"
+        font_size: "80dp"
+        color: 1,0,1,1
