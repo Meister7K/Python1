@@ -14,14 +14,34 @@ LabelEx:
         font_name: "practice/fonts/AC.ttf"
         font_size: "80dp"
         color: 1,0,1,1
+        #can add not in front of variable to create inverse 
+        disabled: root.button_disabled
     Button: 
         text: "Reset"
         on_press: root.on_reset_click()
         font_name: "practice/fonts/AC.ttf"
         font_size: "80dp"
         color: 1,0,1,1
+        disabled: root.button_disabled
     Label: 
         text: root.my_text
+        font_name: "practice/fonts/AC.ttf"
+        font_size: "80dp"
+        color: 1,0,1,1
+    Switch:
+        on_active: root.on_active(self)
+        font_name: "practice/fonts/AC.ttf"
+        font_size: "80dp"
+        color: 1,0,1,1
+    Slider: 
+        min: 0
+        max:100
+        value: 50
+        #orientation: vertical
+        on_value: root.on_slide(self)
+        disabled: root.slide_dis
+    Label:
+        text: root.slider_value   
         font_name: "practice/fonts/AC.ttf"
         font_size: "80dp"
         color: 1,0,1,1
