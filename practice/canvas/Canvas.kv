@@ -1,0 +1,50 @@
+CanvasEx2:  #mainInterface
+
+#:set s dp(50)
+
+<CanvasEx>:
+    canvas:
+        Color:
+            rgba:1,1,1,0
+        Ellipse: 
+            pos: self.center_x-s/2, self.center_y-s/2
+            size: s, s
+            
+        Color:
+            rgba:1,1,1,1
+        Line:
+            #(xs,ys,xe,ye)
+            points: (self.width/2,self.height/2 + self.height/8,self.width/2,self.height/2 -self.height/8)
+            width: 2.
+        Line:
+            #(xs,ys,xe,ye)
+            points: (self.width/2+self.width/8,self.height/2,self.width/2-self.width/8,self.height/2)
+            width: 2.
+        Line:
+            ellipse: (self.width/2 - self.width/8 ,self.height/2 - self.height/8, self.width/4,self.height/4)
+            #center_x, center_y, radius_x, radius_y
+            width: 2.
+        
+<CanvasEx2>:
+    Button:
+        text: "right"
+        on_press: root.right_button_click()
+        pos: 100, 50
+        size: s, s
+    Button:
+        text: "up"
+        on_press: root.up_button_click()
+        pos: 50, 100
+        size: s, s
+    Button:
+        text: "down"
+        on_press: root.down_button_click()
+        pos: 50, 0
+        size: s, s
+    Button:
+        text: "left"
+        on_press: root.left_button_click()
+        pos: 0, 50
+        size: s,s
+
+  

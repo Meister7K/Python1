@@ -29,19 +29,39 @@ LabelEx:
         font_size: "80dp"
         color: 1,0,1,1
     Switch:
+        id: my_switch
         on_active: root.on_active(self)
         font_name: "practice/fonts/AC.ttf"
         font_size: "80dp"
         color: 1,0,1,1
     Slider: 
+        id: my_slider
         min: 0
         max:100
         value: 50
         #orientation: vertical
         on_value: root.on_slide(self)
-        disabled: root.slide_dis
+        disabled: not my_switch.active
     Label:
         text: root.slider_value   
         font_name: "practice/fonts/AC.ttf"
         font_size: "80dp"
         color: 1,0,1,1
+    BoxLayout:
+        orientation: "vertical"
+        Label: 
+            text: (str(int(my_slider.value))+"%")
+        ProgressBar:
+            max:100
+            value: my_slider.value
+    TextInput:
+        id: my_input
+        text: "Type Here"
+        multiline: False
+        on_text_validate: root.press_enter(self)
+        
+    Label:
+        text: root.enter_text
+        text_size: self.width, None
+        size_hint: 1, None
+        height: self.texture_size[1]

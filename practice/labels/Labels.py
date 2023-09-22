@@ -13,6 +13,7 @@ class LabelEx(GridLayout):
     button_disabled = BooleanProperty(True)
     slider_value = StringProperty("50")
     slide_dis = BooleanProperty(True)
+    enter_text = StringProperty("After typing, press enter to update me ")
 
     def on_button_click(self):
         print("clicked")
@@ -48,6 +49,8 @@ class LabelEx(GridLayout):
         if self.slide_dis == False:
             print("s"+ str(int(widget.value)))
             self.slider_value = str(int(widget.value))
+    def press_enter(self, widget):
+        self.enter_text = widget.text
 
         
      
